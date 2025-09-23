@@ -35,7 +35,35 @@ a {
   place-items: center;
   white-space : nowrap;
 }
+.intro-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  gap: 30%;
+}
 
+.name-intro-container h4, h1 {
+  color: white;
+  width: auto;
+  position: relative;
+  top: 100px;
+  left: 100px;
+  font-family: SUSE Mono;
+  margin: 0;
+  white-space:inherit;
+  white-space: nowrap;
+}
+.name-intro-container h1 {
+  font-size: 70px;
+}
+.name-intro-container h4 {
+  padding-left: 8px;
+}
 
+.img-container{
+  display: flex;
+}
 
 
