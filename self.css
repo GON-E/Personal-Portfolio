@@ -4,6 +4,8 @@ html {
 body  {
   background-color: #121212;
   height: 1000px;
+  background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 30px 30px;
 }
 html, body {
   margin: 0;
@@ -22,19 +24,22 @@ a {
 }
 .general-info-container {
   /*Background Image is Dots*/
-  background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
-  background-size: 30px 30px;
   height: 700px;
 }
 .general-info-selection{
-  margin-right: 10px;
+  z-index: 1;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 10px 10px 20px 10px;
+  border-radius: 20px;
   display: grid;
-  justify-content: flex-end;
   grid-template-columns: auto auto auto auto;
   gap: 30px;
-  place-items: center;
+  position: fixed;
   white-space : nowrap;
+  background-color: rgba(44, 44, 44, 0.8); /* 80% visible */
 }
+
 .intro-container {
   display: grid;
   grid-template-columns: auto auto;
