@@ -1,11 +1,13 @@
+
 html {
   scroll-behavior: smooth;  
 }
 body  {
   background-color: #121212;
-  height: 1000px;
+  height: 5000px;
   background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
   background-size: 30px 30px;
+  font-family: SUSE Mono;
 }
 html, body {
   margin: 0;
@@ -16,7 +18,6 @@ a {
   color: #00f5d4;
   cursor: pointer;
   margin-top: 10px;
-  font-family: SUSE Mono;
 }
 
 .info-title{
@@ -38,6 +39,8 @@ a {
   position: fixed;
   white-space : nowrap;
   background-color: rgba(44, 44, 44, 0.8); /* 80% visible */
+  left: 0;
+  top: 0;
 }
 
 .intro-container {
@@ -49,18 +52,17 @@ a {
   gap: 30%;
 }
 
-.name-intro-container h4, h1 {
+.name-intro-container h4,
+.name-intro-container h1 {
   color: white;
   width: auto;
   position: relative;
   top: 100px;
   left: 100px;
-  font-family: SUSE Mono;
-  margin: 0;
-  white-space:inherit;
-  white-space: nowrap;
+  margin: 0;  
+  white-space: nowrap; /* inherit is not needed */
 }
-.name-intro-container h1 {
+.intro-container h1 {
   font-size: 70px;
 }
 .name-intro-container h4 {
@@ -69,6 +71,15 @@ a {
 
 .img-container{
   display: flex;
+}
+.general-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.general-title h1 {
+  color: white;
+  font-size: 50px;
 }
 
 
