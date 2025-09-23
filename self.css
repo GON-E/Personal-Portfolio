@@ -1,11 +1,41 @@
+html {
+  scroll-behavior: smooth;  
+}
 body  {
   background-color: #121212;
+  height: 1000px;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #00f5d4;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: SUSE Mono;
+}
+
+.info-title{
+  white-space: nowrap;
+}
+.general-info-container {
   /*Background Image is Dots*/
   background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
   background-size: 30px 30px;
+  height: 700px;
 }
-
-.general-info-selection {
+.general-info-selection{
+  margin-right: 10px;
   display: grid;
   justify-content: flex-end;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px;
+  place-items: center;
+  white-space : nowrap;
 }
+
+
+
+
