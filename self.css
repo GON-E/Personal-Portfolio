@@ -1,0 +1,11 @@
+body  {
+  background-color: #121212;
+  /*Background Image is Dots*/
+  background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.general-info-selection {
+  display: grid;
+  justify-content: flex-end;
+}
