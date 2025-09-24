@@ -7,7 +7,7 @@ body  {
   height: 5000px;
   background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
   background-size: 30px 30px;
-  font-family: SUSE Mono;
+  font-family: 'SUSE Mono';
 }
 html, body {
   margin: 0;
@@ -18,6 +18,12 @@ a {
   color: #00f5d4;
   cursor: pointer;
   margin-top: 10px;
+}
+img {
+  width: 70%;
+  height: 70%;
+  border-radius: 20px;
+
 }
 
 .info-title{
@@ -44,12 +50,15 @@ a {
 }
 
 .intro-container {
+  padding-left: 10%;
   display: grid;
-  grid-template-columns: auto auto;
-  width: 50%;
-  height: 50%;
-  position: absolute;
-  gap: 30%;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  max-width: 1100px;
+  gap: 10%;
 }
 
 .name-intro-container h4,
@@ -57,8 +66,6 @@ a {
   color: white;
   width: auto;
   position: relative;
-  top: 100px;
-  left: 100px;
   margin: 0;  
   white-space: nowrap; /* inherit is not needed */
 }
@@ -70,7 +77,11 @@ a {
 }
 
 .img-container{
-  display: flex;
+  /*Wont grow or shrink Baseline 400px*/
+  flex: 0 0 400px;
+  width: 400px;
+  height: 400px;
+  padding-top: 100px;
 }
 .general-title {
   display: flex;
@@ -80,6 +91,63 @@ a {
 .general-title h1 {
   color: white;
   font-size: 50px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.name-intro-container h4 {
+  display: inline-block;
+  animation: slideIn 1s ease-out forwards;
+  color: #00f5d4;
+}
+
+.name-intro-container h1 {
+  position: absolute;
+  /*Typing Effect*/
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid teal;  /* cursor effect */
+  /* 14 = number of characters JUSTIN GONZAGA*/
+    animation: typing 2s steps(14) infinite,
+    blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 14ch;
+  }
+  60% {
+    width: 14ch;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.about-container {
+  display: flex;
+  max-width: 100%;
+  color: white;
+  text-align: justify;
+  padding: 20px;
+  border: 1px solid teal;
 }
 
 
