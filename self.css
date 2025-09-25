@@ -23,9 +23,11 @@ img {
   width: 70%;
   height: 70%;
   border-radius: 20px;
-
 }
 
+ section {
+  margin-bottom: 10%;
+}
 .info-title{
   white-space: nowrap;
 }
@@ -148,16 +150,17 @@ img {
   text-align: justify;
   padding: 20px;
   border: 1px solid teal;
-  margin-bottom: 20%;
 }
 
 .education-container {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 40px;
   border: 1px solid teal;
   color: white;
   place-items: center;
   padding: 20px;
+
 }
 
 .junior-high, .senior-high, .college {
@@ -168,3 +171,43 @@ img {
   height: 100%;
   place-items: center;
 }
+
+.skills-container {
+  display: flex;
+  border: 1px solid teal;
+  color: white;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+.html-container, .css-container, 
+.js-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  color: black;
+}
+.html-container {
+  background-color: orange;
+}
+
+.css-container {
+  background-color: cyan;
+}
+
+.js-container {
+  background-color: yellow;
+  padding: 5px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  border: 1px solid teal;
+
+}
+
