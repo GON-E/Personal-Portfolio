@@ -72,7 +72,7 @@ img {
   white-space: nowrap; /* inherit is not needed */
 }
 .intro-container h1 {
-  font-size: 70px;
+  font-size: 65px;
 }
 .name-intro-container h4 {
   padding-left: 8px;
@@ -187,41 +187,69 @@ img {
   justify-content: center;
   width: 100px;
   color: black;
+  cursor: pointer;
+  border-radius: 4px;
+
+  transition: box-shadow 0.2s ease-in-out;
 }
 .html-container {
   background-color: orange;
 }
 
+.html-container:hover {
+  box-shadow: 0 0 5px orange,
+              0 0 25px orange,
+              0 0 50px orange;
+}
+
 .css-container {
   background-color: cyan;
 }
+.css-container:hover {
+  box-shadow: 0 0 5px cyan,
+              0 0 25px cyan,
+              0 0 50px cyan;
+}
+
 
 .js-container {
   background-color: yellow;
   padding: 5px;
 }
 
+.js-container:hover {
+  box-shadow: 0 0 5px yellow,
+              0 0 25px yellow,
+              0 0 50px yellow;
+}
+
 .contact-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   max-width: 100%;
   border: 1px solid teal;
+  gap: 20px;
 }
 
-.facebook-container, .github-container {
+.facebook-container, .github-container, .monkeytype-container, .mail-container{
   display: flex;
+  flex-wrap: wrap;
   width: 60px;
   height: 60px;
   justify-content: center;
   align-items: center;
 }
-.facebook-container a , .github-container a{
+.facebook-container a , .github-container a, .monkeytype-container a, .mail-container a{
   margin: 0;
 }
 
 .github-container img{ 
   background-color: white;
-  ;
+}
+
+.mail-container img {
+  transform: scale(1.3);
 }
