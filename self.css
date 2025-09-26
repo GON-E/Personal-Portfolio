@@ -4,7 +4,6 @@ html {
 }
 body  {
   background-color: #121212;
-  height: 5000px;
   background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
   background-size: 30px 30px;
   font-family: 'SUSE Mono';
@@ -50,6 +49,14 @@ img {
   left: 0;
   top: 0;
 }
+.general-info-container a {
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.general-info-container a:hover {
+  color: rgb(167, 45, 201);
+}
 
 .intro-container {
   padding-left: 10%;
@@ -63,6 +70,12 @@ img {
   gap: 10%;
 }
 
+.general-title h1{
+  transition: color 0.2 ease-in-out;
+} 
+.general-title h1:hover {
+  color: rgb(167, 45, 201);
+}
 .name-intro-container h4,
 .name-intro-container h1 {
   color: white;
@@ -181,7 +194,7 @@ img {
 }
 
 .html-container, .css-container, 
-.js-container {
+.js-container, .php-container, .mysql-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,6 +204,7 @@ img {
   border-radius: 4px;
 
   transition: box-shadow 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 .html-container {
   background-color: orange;
@@ -200,6 +214,7 @@ img {
   box-shadow: 0 0 5px orange,
               0 0 25px orange,
               0 0 50px orange;
+  transform: scale(1.1);
 }
 
 .css-container {
@@ -209,6 +224,7 @@ img {
   box-shadow: 0 0 5px cyan,
               0 0 25px cyan,
               0 0 50px cyan;
+  transform: scale(1.1);
 }
 
 
@@ -221,6 +237,26 @@ img {
   box-shadow: 0 0 5px yellow,
               0 0 25px yellow,
               0 0 50px yellow;
+  transform: scale(1.1);
+}
+.php-container{
+  background-color: rgb(37, 48, 135);
+}
+.php-container:hover {
+   box-shadow: 0 0 5px rgb(37, 48, 135),
+              0 0 25px rgb(37, 48, 135),
+              0 0 50px rgb(37, 48, 135);
+  transform: scale(1.1);
+}
+.mysql-container {
+  background-color: rgb(22, 110, 210);
+}
+
+.mysql-container:hover {
+  box-shadow: 0 0 5px rgb(223, 172, 18),
+              0 0 25px rgb(223, 172, 18),
+              0 0 50px rgb(223, 172, 18);
+  transform: scale(1.1);
 }
 
 .contact-container {
@@ -241,7 +277,13 @@ img {
   height: 60px;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease-in-out;
 }
+.facebook-container:hover, .github-container:hover,
+.monkeytype-container:hover, .mail-container:hover {
+  transform: scale(1.1);
+}
+
 .facebook-container a , .github-container a, .monkeytype-container a, .mail-container a{
   margin: 0;
 }
