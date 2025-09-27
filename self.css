@@ -22,6 +22,7 @@ img {
   width: 70%;
   height: 70%;
   border-radius: 20px;
+  transform: scale(1.3);
 }
 
  section {
@@ -38,8 +39,10 @@ img {
   z-index: 1;
   margin-left: 10px;
   margin-top: 10px;
+  margin-bottom: 50px;
   padding: 10px 10px 20px 10px;
   border-radius: 20px;
+  max-width: 100%;
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 30px;
@@ -59,15 +62,14 @@ img {
 }
 
 .intro-container {
-  padding-left: 10%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
-  width: auto;
-  height: auto;
+  gap: 50px; /* More consistent than 10% */
   max-width: 1100px;
-  gap: 10%;
+  margin: 0 auto; /* centers the grid */
+  padding: 50px 20px; /* breathing room */
 }
 
 .general-title h1{
@@ -76,16 +78,21 @@ img {
 .general-title h1:hover {
   color: rgb(167, 45, 201);
 }
+
+.name-intro-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* aligns text left nicely */
+}
 .name-intro-container h4,
 .name-intro-container h1 {
   color: white;
   width: auto;
-  position: relative;
   margin: 0;  
   white-space: nowrap; /* inherit is not needed */
 }
 .intro-container h1 {
-  font-size: 65px;
+  font-size: 60px;
 }
 .name-intro-container h4 {
   padding-left: 8px;
@@ -122,21 +129,20 @@ img {
 }
 
 .name-intro-container h4 {
-  display: inline-block;
-  animation: slideIn 1s ease-out forwards;
+  margin: 0;
+  padding-left: 5px;
   color: #00f5d4;
+  animation: slideIn 1s ease-out forwards;
 }
 
 .name-intro-container h1 {
-  position: absolute;
-  /*Typing Effect*/
-  width: 0;
+  margin: 0;
+  color: white;
+  font-size: 60px;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid teal;  /* cursor effect */
-  /* 14 = number of characters JUSTIN GONZAGA*/
-    animation: typing 2s steps(14) infinite,
-    blink 0.7s step-end infinite;
+  border-right: 3px solid teal;
+  animation: typing 2.5s steps(14) infinite, blink 0.7s step-end infinite;
 }
 
 @keyframes typing {
@@ -297,7 +303,7 @@ img {
   transform: scale(1.3);
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
   .contact-container {
     flex-direction: column;
   }
@@ -308,18 +314,39 @@ img {
   }
   .intro-container {
     grid-template-columns: 1fr;
-    padding: 0;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 70px;
+    height: auto;
   }
   .img-container {
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: auto;
     padding: 0;
-  }
+  } 
   .img-container img {
     width: 40%;
     height: 40%;
     padding: 0;
+  }
+
+  .intro-container {
+    grid-template-columns: 1fr;
+  }
+
+  .name-intro-container {
+    justify-content: center;
+    align-items: center;
+  }
+  .name-intro-container h1{
+    font-size: 30px;
+  }
+  .general-info-selection {
+    place-items: center;
+    margin-left: 10px;
+    width: auto;
   }
 }
 
